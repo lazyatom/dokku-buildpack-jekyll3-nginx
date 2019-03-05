@@ -61,7 +61,7 @@ if [ ! -f $BUILD_DIR/.gems/bin/jekyll ]; then
     gem install therubyracer --no-rdoc --no-ri | indent
 
     if [ -f $BUILD_DIR/Gemfile ]; then
-      gem install bundler --no-rdoc --no-ri | indent
+      gem install bundler -v '< 2' --no-rdoc --no-ri | indent
     fi
 fi
 
